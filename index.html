@@ -105,7 +105,9 @@
 <script>
   // ===== CONFIGURAÇÃO =====
   // Cole aqui a URL do seu Web App do Apps Script (Code_API.gs) e o mesmo token definido lá.
-  const API_URL = 'https://script.google.com/macros/s/AKfycbwUReqzvgXU7KVxayUQGXfW3m_l1LmT2kw9oS8jfk7G2sD5Tdx6eluzp84LtnSr4RXk/exec';
+  // Front chama o proxy interno (Cloudflare Pages Function em /api),
+  // que repassa a requisição pro Apps Script sem problema de CORS.
+  const API_URL = '/api';
   const API_TOKEN = 'u7Ly32tgnkqYZHQHiQr1s2YfCu8jeMS_nxVVpSaic2w';
   // =========================
 
